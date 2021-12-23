@@ -1,0 +1,17 @@
+﻿<Window x:Class="Lab02_04_DockPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab02_04_DockPanel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel LastChildFill="True">
+        <TextBlock DockPanel.Dock="Top" Text="Top" Background="Beige"/>
+        <TextBlock DockPanel.Dock="Bottom" Text="Bottom" Background="Azure"/>
+        <TextBlock DockPanel.Dock="Right" Text="RIght" Background="Green"/>
+        <TextBlock DockPanel.Dock="Left" Text="Left" Background="Magenta"/>
+        <TextBlock Text="NoDock"/>
+    </DockPanel>
+
+</Window>

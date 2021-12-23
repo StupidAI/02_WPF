@@ -1,0 +1,32 @@
+﻿<Window x:Class="Lab02_21_Example2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab02_21_Example2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="285*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="443*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Content="Next" Margin="5" Grid.Row="0" Height="25"/>
+            <Button Content="Previos" Margin="5" Grid.Row="1" Height="25"/>
+            <Button Content="Close" Margin="5" Grid.Row="2" Height="25" VerticalAlignment="Bottom"/>
+        </Grid>
+        <GridSplitter Grid.Column="1" Margin="0" Width="5"/>
+        <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Width="5"/>
+        <TextBox Grid.Column="2" Margin="5" Padding="2" BorderBrush="Gray" BorderThickness="2" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto">
+            Сотрудниками и экспертами Университета Минстроя соместно с Национальным объединением организаций в сфере технологий информационного моделирования (НОТИМ) подготовлены обучающие материалы, которые позволяют вам и сотрудникам вашей организации соответствовать требованиям цифровизации строительной отрасли и получить необходимые знания по ТИМ при работе с государственным заказом.
+        </TextBox>
+
+    </Grid>
+</Window>
