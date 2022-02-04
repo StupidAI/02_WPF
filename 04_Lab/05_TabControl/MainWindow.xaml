@@ -1,0 +1,22 @@
+﻿<Window x:Class="_05_TabControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_05_TabControl"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Tab 1" Background="Gray">
+                <Label Content="Something 1"/>
+            </TabItem>
+            <TabItem Header="Tab 2" Background="Yellow">
+                <Label Content="Something 2"/>
+            </TabItem>
+            <TabItem Header="Tab 3" Background="Beige">
+                <Label Content="Something 3"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

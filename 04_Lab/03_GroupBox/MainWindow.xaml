@@ -1,0 +1,24 @@
+﻿<Window x:Class="_03_GroupBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_03_GroupBox"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <GroupBox Margin="10" VerticalAlignment="Top">
+            <GroupBox.Header>
+                <Border BorderThickness="1" BorderBrush="#FFD5DFE5" CornerRadius="5">
+                    <Image Source="Data/Pic.png"/>
+                </Border>
+            </GroupBox.Header>
+            <StackPanel>
+                <RadioButton Content="Var 1" Margin="5"/>
+                <RadioButton Content="Var 2" Margin="5"/>
+                <RadioButton Content="Var 3" Margin="5"/>
+                <Button Content="Ok" Margin="5" Padding="5" Width="100" HorizontalAlignment="Left"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>

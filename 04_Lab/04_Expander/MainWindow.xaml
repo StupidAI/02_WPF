@@ -1,0 +1,28 @@
+﻿<Window x:Class="_04_Expander.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_04_Expander"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Expander Header="First" Margin="5" Padding="3" BorderThickness="2" BorderBrush="Black">
+                <TextBox Padding="3" BorderThickness="1" BorderBrush="Gray" Text="Just a text here"/>
+            </Expander>
+            <Expander Header="Second" Margin="5" Padding="3" BorderThickness="2" BorderBrush="Black">
+                <StackPanel>
+                    <Button Content="1" Margin="3"/>
+                    <Button Content="2" Margin="3"/>
+                    <Button Content="3" Margin="3"/>
+                </StackPanel>
+            </Expander>
+            <Expander Header="Third" Margin="5" Padding="3" VerticalAlignment="Bottom"
+                      BorderThickness="2" BorderBrush="Black" 
+                      ExpandDirection="Right" IsExpanded="True">
+                <TextBox Padding="3" BorderThickness="1" BorderBrush="Gray" Text="Just a text here"/>
+            </Expander>
+        </StackPanel>
+    </Grid>
+</Window>
