@@ -1,0 +1,26 @@
+﻿<Window x:Class="_02_DataTrigger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_02_DataTrigger"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <!--стиль для кнопки которую хотим скрывать-->
+        <Style TargetType="Button">
+            <Style.Triggers>
+                <!--дата тригер - когда у целевого объекта chkBox значение станет равно value применить стиль
+                есть еще MultiDataTrigger - когда все свойства или зависимости принимают указанные значения 
+                есть еще EventTrigger - нужен для создания анимации  см. лекцию - примера нет -->
+                <DataTrigger Binding="{Binding ElementName=chkBox, Path=IsChecked}" Value="True">
+                    <Setter Property="IsEnabled" Value="False"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <CheckBox x:Name="chkBox" Content="Деактивировать кнопку"/>
+        <Button Content="Кнопка 1"/>
+    </StackPanel>
+</Window>

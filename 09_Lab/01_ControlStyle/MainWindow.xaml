@@ -1,0 +1,59 @@
+﻿<Window x:Class="_01_ControlStyle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_01_ControlStyle"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <!--так можно создать стиль для родительского объекта всех элементов Control и назначать для всех элементов 
+        Получается что можно сделать иерархию -->
+        <!-- <Style x:Key="StyleRedButton">
+            <Setter Property="Control.Background" Value="Red"/>
+            <Setter Property="Control.Foreground" Value="PaleGreen"/>
+            <Setter Property="Control.FontSize" Value="20"/>
+            <Setter Property="Control.Margin" Value="10"/>
+        </Style> -->
+        <!--Сначала создаем стиль для общих свойств-->
+        <Style x:Key="Contol">
+
+            <Style.Setters>
+                <Setter Property="Control.Foreground" Value="PaleGreen"/>
+                <Setter Property="Control.FontSize" Value="20"/>
+            </Style.Setters>
+            <!--суть записаного: отслеживать "свойство" со "значением"
+            Есть много других тригеров - см. лекцию -->
+            <Style.Triggers>
+                <!--можно создать мультитригер который будет учитывать несколько условий-->
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="Control.IsMouseOver" Value="True"/>
+                        <Condition Property="Control.IsFocused" Value="True"/>
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.Setters>
+                        <Setter Property="Control.FontSize" Value="30"/>
+                    </MultiTrigger.Setters>
+                </MultiTrigger>
+                <!--одиночный тригер-->
+                <!--<Trigger Property="ItemsControl.IsMouseOver" Value="True">
+                    --><!--как только тригер сработает - изменить значение стиля--><!--
+                    <Setter Property="Control.FontSize" Value="30"/>
+                </Trigger>-->
+            </Style.Triggers>
+        </Style>
+        <!--далее более частные но которые зависят от общих BasedOn="{StaticResource Contol}-->
+        <Style x:Key="ButtonStyle" BasedOn="{StaticResource Contol}">
+            <Setter Property="Control.Margin" Value="10"/>
+        </Style>
+        <Style x:Key="TextBlockStyle" BasedOn="{StaticResource Contol}">
+            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <UniformGrid Rows="2">
+        <Button Content="Кнопка" Style="{StaticResource ButtonStyle}"/>
+        <Button Content="Кнопка 2" Style="{StaticResource ButtonStyle}"/>
+        <Button Content="Кнопка 3" Background="Green"/>
+        <TextBlock Text="Проверка" Style="{StaticResource TextBlockStyle}"/>
+    </UniformGrid>
+</Window>
