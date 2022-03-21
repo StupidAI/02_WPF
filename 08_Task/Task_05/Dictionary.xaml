@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:col ="clr-namespace:System.Collections;assembly=mscorlib"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!--Для подключения словаря к проекту в App.xaml прописываются источники словарей-->
+    <col:ArrayList x:Key="FontStyle">
+        <sys:String>Arial</sys:String>
+        <sys:String>Times New Roman</sys:String>
+        <sys:String>GOST Common</sys:String>
+    </col:ArrayList>
+    <!--вряд ли высота шрифта будет более 2^16 потому принимаем тип данный для высоты шрифта Int16-->
+    <col:ArrayList x:Key="FontSize">
+        <sys:Int16>12</sys:Int16>
+        <sys:Int16>16</sys:Int16>
+        <sys:Int16>20</sys:Int16>
+    </col:ArrayList>
+</ResourceDictionary>
