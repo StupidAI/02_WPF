@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--что бы подключить файл к приложению надо идти в AppXAML-->
+    <SolidColorBrush Color="Red" x:Key="SCBRed" x:Shared="False"/>
+    <SolidColorBrush Color="Gray" x:Key="SCBGray"/>
+</ResourceDictionary>

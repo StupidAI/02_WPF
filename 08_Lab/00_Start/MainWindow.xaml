@@ -1,0 +1,43 @@
+﻿<Window x:Class="_00_Start.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_00_Start"
+        xmlns:col ="clr-namespace:System.Collections;assembly=mscorlib"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <!--Хранилище ресурсов
+    Часть ресурсов можно вынести в отдельный файл-->
+    <Window.Resources>
+        <!--запись x:Shared="False" заставляет при обращении к данному классу заново создавать его экземпляры-->
+        <!--закомментировал потому ресурсы венесены в отдельный файл.-->
+        <!--<SolidColorBrush Color="Red" x:Key="SCBRed" x:Shared="False"/>
+        <SolidColorBrush Color="Gray" x:Key="SCBGray"/>-->
+        <!--Добавили в пространства имен строку xmlns:col ="clr-namespace:System.Collections;assembly=mscorlib" для коллекции
+    xmlns:sys="clr-namespace:System;assembly=System" - для строк
+        После чего заносим записи в словарь под ключом x:Key="Colors" -->
+        <col:ArrayList x:Key="Colors">
+            <sys:String>Красный</sys:String>
+            <sys:String>Зеленый</sys:String>
+            <sys:String>Синий</sys:String>
+        </col:ArrayList>
+    </Window.Resources>
+    <StackPanel>
+        <!--Назначение ресурса кнопке
+        Статический ресурс устанавливается в начале выполнения программы и сохраняется таким, какой был в момент инициализации-->
+        <Button x:Name="btnButton1" Content="Кнопка 1" Background="{StaticResource SCBRed}" Click="btnButton1_Click"/>
+        <Button Content="Кнопка 2" Background="{StaticResource SCBGray}"/>
+        <!--Динамический ресурс может меняться программно во время исполнения кода -->
+        <Button Content="Кнопка 3" Background="{DynamicResource SCBRed}"/>
+        <!--Второй вариант назначения ресурса кнопке-->
+        <Button Content="Кнопка 4">
+            <Button.Background>
+                <StaticResource ResourceKey="SCBGray"/>
+            </Button.Background>
+        </Button>
+        <!--Обращаемся к словарю за списком доступных значений-->
+        <ComboBox ItemsSource="{StaticResource Colors}"/>
+    </StackPanel>
+</Window>
