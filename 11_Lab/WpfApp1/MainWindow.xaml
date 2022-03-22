@@ -1,0 +1,48 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="800">
+    <Window.Resources>
+        <RectangleGeometry Rect="20,20,200,100" x:Key="rect"/>
+        <EllipseGeometry Center="220,120" RadiusX="50" RadiusY="50" x:Key="circle"/>
+    </Window.Resources>
+    <UniformGrid Columns="2" Rows="4">
+        
+        <Path Stroke="Black" Fill="Orange">
+            <Path.Data>
+                <CombinedGeometry GeometryCombineMode="Union"
+                                  Geometry1="{StaticResource rect}"
+                                  Geometry2="{StaticResource circle}"/>
+            </Path.Data>
+        </Path>
+        <TextBlock Text="Union" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Center"/>
+        <Path Stroke="Black" Fill="Orange">
+            <Path.Data>
+                <CombinedGeometry GeometryCombineMode="Intersect"
+                                  Geometry1="{StaticResource rect}"
+                                  Geometry2="{StaticResource circle}"/>
+            </Path.Data>
+        </Path>
+        <TextBlock Text="Intersect" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Center"/>
+        <Path Stroke="Black" Fill="Orange">
+            <Path.Data>
+                <CombinedGeometry GeometryCombineMode="Xor"
+                                  Geometry1="{StaticResource rect}"
+                                  Geometry2="{StaticResource circle}"/>
+            </Path.Data>
+        </Path>
+        <TextBlock Text="XOR" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Center"/>
+        <Path Stroke="Black" Fill="Orange">
+            <Path.Data>
+                <CombinedGeometry GeometryCombineMode="Exclude"
+                                  Geometry1="{StaticResource rect}"
+                                  Geometry2="{StaticResource circle}"/>
+            </Path.Data>
+        </Path>
+        <TextBlock Text="Exclude" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Center"/>
+    </UniformGrid>
+</Window>

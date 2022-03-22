@@ -1,0 +1,13 @@
+﻿<Window x:Class="_01_Start.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_01_Start"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Path Data="M170.05173,305.45882 C170.05173,305.45882 502.00228,68.351761 499.98434,194.47284 497.96641,320.59391 304.24468,303.44042 304.24468,303.44042" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="148.947" Margin="245.724,129.262,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="330.942"/>
+
+    </Grid>
+</Window>
