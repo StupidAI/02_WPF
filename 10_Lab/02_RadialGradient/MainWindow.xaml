@@ -1,0 +1,21 @@
+﻿<Window x:Class="_02_RadialGradient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_02_RadialGradient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnButton" Content="Кнопка" Height="50" Width="200" Click="btnButton_Click">
+            <Button.Background>
+                <!--Стартовая точка 0,0 - центр -->
+                <RadialGradientBrush GradientOrigin="0,1">
+                    <GradientStop Color="Blue" Offset="0"/>
+                    <GradientStop Color="Yellow" Offset="0.5"/>
+                    <GradientStop Color="Green" Offset="1"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
