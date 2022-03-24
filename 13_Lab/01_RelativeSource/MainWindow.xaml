@@ -1,0 +1,27 @@
+﻿<Window x:Class="_01_RelativeSource.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_01_RelativeSource"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Margin="5">
+        <StackPanel Margin="20">
+            <!--Указание в качестве источника относительного источника
+            Свойство RelativeSource требует объект RelativeSource - потому такой синтаксис
+            RelativeSource Mode=Self - ссылка на текущий объект в котором объявлена привязка -->
+            <TextBlock FontSize="20"
+                       FontFamily="Courier New"
+                       Text="{Binding RelativeSource={RelativeSource Mode=Self}, Path=FontFamily}"/>
+            <!--данный поиск работает по направлению вверх по дереву
+            В данном случае ищем шрифт для окна - и так как для него ничего не установлено то берется по умолчанию -->
+            <TextBlock FontSize="20"
+                       Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=FontFamily}"/>
+            <!--данный поиск работает по направлению вверх по дереву
+            В данном случае ищем отступы для StackPanel расположенного на 2 уровня выше -->
+            <TextBlock FontSize="20"
+                       Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=StackPanel, AncestorLevel=2}, Path=Margin}"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
