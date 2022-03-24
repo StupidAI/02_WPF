@@ -1,0 +1,37 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--Словарь ресурсов для светлой темы-->
+
+    <!--Цвета-->
+    <SolidColorBrush x:Key="cMain" Color="#FFE4DED0"/>
+    <SolidColorBrush x:Key="cBack" Color="White"/>
+    <SolidColorBrush x:Key="cFront" Color="Black"/>
+
+    <!--Стили-->
+    <Style x:Name="sMenu" TargetType="Menu">
+        <Setter Property="Background" Value="{StaticResource cMain}"/>
+        <Setter Property="Foreground" Value="{StaticResource cFront}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource cBack}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+    </Style>
+    <Style TargetType="MenuItem">
+        <Setter Property="Background" Value="{StaticResource cMain}"/>
+        <Setter Property="Foreground" Value="{StaticResource cFront}"/>
+    </Style>
+    <Style TargetType="ToolBarTray">
+        <Setter Property="Background" Value="{StaticResource cBack}"/>
+    </Style>
+    <Style TargetType="ToolBar">
+        <Setter Property="Background" Value="{StaticResource cMain}"/>
+    </Style>
+    <Style TargetType="RadioButton">
+        <Setter Property="Foreground" Value="{StaticResource cFront}"/>
+    </Style>
+    <Style TargetType="TextBox">
+        <Setter Property="Background" Value="{StaticResource cBack}"/>
+        <Setter Property="Foreground" Value="{StaticResource cFront}"/>
+    </Style>
+    <Style TargetType="Button">
+        <Setter Property="BorderBrush" Value="{StaticResource cFront}"/>
+    </Style>
+</ResourceDictionary>
