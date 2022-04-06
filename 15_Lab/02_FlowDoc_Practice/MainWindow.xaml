@@ -1,0 +1,149 @@
+﻿<Window x:Class="_02_FlowDoc_Practice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_02_FlowDoc_Practice"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <FlowDocumentScrollViewer x:Name="docViewer">
+            <FlowDocument>
+                <Paragraph>
+                    <Floater Width="250" HorizontalAlignment="Right">
+                        <BlockUIContainer>
+                            <Image Source="data/WPF.png"/>
+                        </BlockUIContainer>
+                    </Floater>
+                    <Hyperlink NavigateUri="https://docs.microsoft.com/ru-ru/visualstudio/designers/getting-started-with-wpf?view=vs-2022">
+                        Windows Presentation Foundation
+                    </Hyperlink>
+                </Paragraph>
+                <Paragraph>
+                    <Span Background="LightGray">
+                        <Span Foreground="Red">
+                            <Bold>Windows Presentation Foundation</Bold>
+                            — это платформа пользовательского интерфейса для создания клиентских приложений для настольных систем.
+                        </Span>
+                    </Span>
+                </Paragraph>
+                <Paragraph>
+                        Платформа разработки WPF поддерживает широкий набор компонентов для разработки приложений, включая модель приложения, 
+                    ресурсы, элементы управления, графику, макет, привязки данных, документы и безопасность.
+                    WPF является частью платформы .NET, и если ранее вы создавали приложения в .NET с помощью ASP.NET или Windows Forms, 
+                    то общий процесс программирования вам уже знаком. WPF использует расширяемый язык разметки для приложений (XAML), 
+                    чтобы предоставить декларативную модель для программирования приложений.
+                </Paragraph>
+                <Paragraph>
+                    <Bold>
+                        Открытие визуализатора дерева WPF
+                    </Bold>
+                </Paragraph>
+                <List MarkerStyle="Square">
+                    <ListItem>
+                        <Paragraph>
+                            В "Советах" в окне Контрольные значения, Автоматические или Локальные рядом с именем объекта WPF щелкните стрелку возле значка лупы.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Откроется список визуализаторов.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Выберите Визуализатор дерева WPF.
+                        </Paragraph>
+                    </ListItem>
+                </List>
+                <Section BorderBrush="Gray" BorderThickness="2">
+                    <Paragraph FontSize="20" FontWeight="Bold">
+                        См. также
+                    </Paragraph>
+                    <Table>
+                        <Table.Columns>
+                            <TableColumn Width="1*"/>
+                            <TableColumn Width="2*"/>
+                        </Table.Columns>
+                        <TableRowGroup>
+                            <TableRow>
+                                <TableCell TextAlignment="Center">
+                                    <Paragraph Margin="3">
+                                        <Bold>
+                                            Заголовок
+                                        </Bold>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell TextAlignment="Center">
+                                    <Paragraph Margin="3">
+                                        <Bold>
+                                            Описание
+                                        </Bold>
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph Margin="3">
+                                        <Hyperlink NavigateUri="https://docs.microsoft.com/ru-ru/visualstudio/xaml-tools/xaml-hot-reload?view=vs-2022">
+                                            Создание и отладка выполняющегося кода XAML
+                                        </Hyperlink>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Margin="3">
+                                        С помощью Горячей перезагрузки XAML можно изучать визуальное дерево объекта WPF, а также просматривать свойства зависимостей WPF для объектов, содержащихся в дереве. В этой статье описывается использование Горячей перезагрузки XAML.
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph Margin="3">
+                                        <Hyperlink NavigateUri="https://docs.microsoft.com/ru-ru/visualstudio/xaml-tools/xaml-hot-reload?view=vs-2022">
+                                            Просмотр свойств XAML во время отладки
+                                        </Hyperlink>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Margin="3">
+                                        С помощью динамического визуального дерева можно изучать визуальное дерево объекта WPF, а также просматривать свойства зависимостей WPF для объектов, содержащихся в дереве.
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph Margin="3">
+                                        <Hyperlink NavigateUri="https://docs.microsoft.com/ru-ru/visualstudio/debugger/how-to-use-the-wpf-tree-visualizer?view=vs-2022">
+                                            Практическое руководство. Использование визуализатора дерева WPF
+                                        </Hyperlink>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph Margin="3">
+                                        Визуализатор дерева WPF можно использовать для изучения визуального дерева объекта WPF, а также для просмотра свойств зависимостей WPF для объектов, содержащихся в дереве. В этом разделе описывается пользовательский интерфейс визуализатора дерева WPF.
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+                    </Table>
+                </Section>
+                <BlockUIContainer>
+                    <!--Позволяет размещать элементы управления: например кнопки-->
+                    <StackPanel>
+                        <TextBlock Text="Нравится? Жми кнопку ниже."/>
+                        <Button x:Name="btn_Like" Content="Like!" Click="btn_Like_Click"/>
+                    </StackPanel>
+                </BlockUIContainer>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="btn_Open" Content="Открыть" Click="btn_Open_Click"/>
+            <Button x:Name="btn_Save" Content="Сохранить" Click="btn_Save_Click"/>
+            <Button x:Name="btn_Clear" Content="Очистить" Click="btn_Clear_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
