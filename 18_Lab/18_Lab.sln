@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00_Start", "00_Start\00_Start.csproj", "{BC1FBBCB-C15F-4AF0-8737-196AD679150B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Cube3D", "01_Cube3D\01_Cube3D.csproj", "{D94676E1-BADE-4179-B4DF-AF00A084D4AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC1FBBCB-C15F-4AF0-8737-196AD679150B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC1FBBCB-C15F-4AF0-8737-196AD679150B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC1FBBCB-C15F-4AF0-8737-196AD679150B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC1FBBCB-C15F-4AF0-8737-196AD679150B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D94676E1-BADE-4179-B4DF-AF00A084D4AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D94676E1-BADE-4179-B4DF-AF00A084D4AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D94676E1-BADE-4179-B4DF-AF00A084D4AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D94676E1-BADE-4179-B4DF-AF00A084D4AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4476B648-0743-4E2B-97D6-13B6522AF010}
+	EndGlobalSection
+EndGlobal
