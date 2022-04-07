@@ -4,9 +4,29 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_01_CircleLenght"
+        xmlns:vm="clr-namespace:_01_CircleLenght.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Введите радус" Margin="5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="5" VerticalContentAlignment="Center"
+                 Text="{Binding Path=Num1}"/>
+        <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="Рассчитать длину окружности" Margin="5" Padding="5"
+                Command="{Binding Path=AddCommand}"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Длина окружности" Margin="5" VerticalAlignment="Bottom"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="5" VerticalContentAlignment="Center" VerticalAlignment="Bottom"
+                 Text="{Binding Path=Num2}"/>
     </Grid>
 </Window>
